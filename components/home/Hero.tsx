@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaLinkedinIn, FaEnvelope, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaEnvelope, FaGithub, FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 
 const Hero = () => {
@@ -10,7 +10,7 @@ const Hero = () => {
         {/* Left Column: Text Section */}
         <section className="flex flex-col space-y-4 text-left">
           <p className="text-gray-400 text-sm tracking-widest uppercase font-medium-bold">
-            HELLO, I&apos;M ABEL ASMELASH
+            HELLO, I&lsquo;M ABEL ASMELASH
           </p>
 
           <h1 className="text-4xl sm:text-3xl font-extrabold uppercase leading-tight tracking-wide">
@@ -50,6 +50,10 @@ const Hero = () => {
                 icon: <FaEnvelope />,
                 href: "mailto:abelasmelash07@gmail.com",
               },
+              {
+                icon: <FaWhatsapp />,
+                href: "https://wa.me/31613983234",
+              },
             ].map((social, index) => (
               <Link
                 key={index}
@@ -79,7 +83,6 @@ const Hero = () => {
         </section>
       </div>
     </main>
-    
   );
 };
 
