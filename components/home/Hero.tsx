@@ -71,13 +71,14 @@ const Hero = () => {
         {/* Right Column: Profile Picture */}
         <section className="flex justify-center items-center">
           <div className="relative">
+            <div className="absolute -inset-4 bg-purple-500/20 blur-2xl rounded-full"></div>
             <Image
-              src="/images/profile.jpg"
+              src="/images/profile.png.jpeg"
               alt="Profile Picture"
-              width={320}
-              height={320}
+              width={300}
+              height={300}
               priority
-              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover border-4 border-purple-500 shadow-2xl"
+              className="relative w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-lg shadow-2xl"
             />
           </div>
         </section>

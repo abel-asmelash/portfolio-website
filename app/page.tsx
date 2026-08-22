@@ -1,11 +1,13 @@
- import Hero from '@/components/home/Hero'
+  import Hero from '@/components/home/Hero'
+  import WhatIDo from '@/components/home/WhatIDo'
 export default function Home() {
   return (
     <>
       <Hero />
-      <h1 className="text-3xl font-bold text-center">
+      <WhatIDo />
+
         
-      </h1>
+      
     
     </>
   );
