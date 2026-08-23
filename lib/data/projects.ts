@@ -1,5 +1,6 @@
 //Array of objects containing information about the projects to be displayed on the portfolio website
-export const projects = [
+import { Project } from "../types/project";
+export const projects: Project[] = [
   {
     title: "Portfolio Website",
     description:

@@ -1,5 +1,7 @@
 //create an array of objects that represent the navigation items for the website
-export const navItems = [
+import { navItem } from "../types/navItems";
+
+export const navItems: navItem[] = [
   {
     label: "Home",
     href: "/",
