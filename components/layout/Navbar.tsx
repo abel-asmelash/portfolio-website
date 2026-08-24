@@ -3,7 +3,7 @@
 import { navItems } from "@/lib/data/navigation";
 import Link from "next/link";
 import React, { useState } from "react";
-
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,7 +27,7 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-
+       <ThemeToggle />
         {/* Mobile Hamburger Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -59,7 +59,6 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden flex flex-col space-y-3 mt-4 pt-4 border-t border-gray-700">

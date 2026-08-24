@@ -1,43 +1,40 @@
-//array of objects that represent the skills for the website
-//import the skills interface from the types folder
+// import the skills interface from the types folder
 import { skill } from "../types/skills";
 
 export const skills: skill[] = [
   {
     title: "Frontend Development",
     description:
-      "Building responsive and user-friendly web applications using HTML, CSS, JavaScript, and React, Tailwind CSS, and Next.js. I am also familiar with modern frontend frameworks and libraries such as Next.js and Tailwind CSS.",
+      "Crafting responsive, high-performance interfaces with React, Next.js, TypeScript, and Tailwind CSS.",
   },
   {
     title: "Backend Development",
     description:
-      " Building RESTful APIs and server-side applications using Node.js, Express, and MongoDB. I am also familiar with database design and management, as well as authentication and authorization techniques.",
+      "Building secure RESTful APIs and robust server-side applications using Node.js and Express.",
   },
   {
     title: "Database Management",
     description:
-      " Designing and managing databases using SQL and NoSQL databases such as MySQL, and MongoDB. I am also familiar with database optimization techniques and data modeling.",
+      "Designing scalable data models and managing SQL/NoSQL databases with MySQL and MongoDB.",
   },
   {
     title: "AI & API Integration",
     description:
-      "Integrating Large Language Models and REST APIs into web applications to build intelligent features, context-aware prompts, and dynamic content generation.",
+      "Integrating LLMs and modern REST APIs to build intelligent features and context-aware workflows.",
   },
   {
     title: "Cloud & Deployment",
     description:
-      "Deploying and hosting full-stack applications using Vercel and Render, paired with Git and GitHub for automated version control and continuous integration.",
+      "Deploying full-stack apps via Vercel and Render with automated Git/GitHub CI/CD pipelines.",
   },
-
   {
     title: "Full-Stack Development",
     description:
-      "Building end-to-end web applications with Next.js, TypeScript, and Tailwind CSS. Implementing user authentication, state management, and seamless integration between frontend interfaces and backend logic.",
+      "Delivering end-to-end web applications with seamless frontend-backend integration and authentication.",
   },
   {
     title: "Developer Tooling & Quality",
     description:
-      "Leveraging TypeScript for type safety, VS Code, Git/GitHub for version control, and AI-assisted tooling like GitHub Copilot to optimize development workflow and maintain clean codebases.",
+      "Writing clean, type-safe code using TypeScript, Git version control, and AI-assisted tooling.",
   },
 ];
-    
