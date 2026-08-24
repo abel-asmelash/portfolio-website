@@ -14,15 +14,16 @@ const Hero = () => {
           </p>
 
           <h1 className="text-4xl sm:text-3xl font-extrabold uppercase leading-tight tracking-wide">
-            I BUILD MODERN <br />
+            FULL-STACK DEVELOPER
+            <br />
             <span className="bg-linear-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
-              WEB EXPERIENCES
+              AI INTEGRATION
             </span>
           </h1>
 
           <p className="text-gray-400 text-lg max-w-lg leading-relaxed">
-            Full-Stack Developer focused on building clean, user-friendly and
-            performant web applications integrated with AI models.
+            Crafting clean, high-performance web applications powered by modern
+            AI workflows.
           </p>
 
           {/* CTA Button */}
