@@ -1,38 +1,74 @@
 import Link from "next/link";
-import { projects } from "../../lib/data/projects";
 import Image from "next/image";
+import { projects } from "../../lib/data/projects";
 
-type Projects = {
+// Singular type name & added tags array to match UI design
+type Project = {
   title: string;
   description: string;
   image: string;
   link: string;
+  tags?: string[];
 };
-const page = () => {
+
+const Page = () => {
   return (
-    <div>
-      <h3>Featured Projects</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {projects.map((project: Projects) => (
-          <div key={project.title} className="border rounded-lg p-4">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <div className="relative w-full h-48 mt-2 rounded-lg overflow-hidden">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-              />
+    <div className="min-h-screen bg-[#07090e] p-8 text-white">
+      <h3 className="mb-6 text-3xl font-bold tracking-tight">
+        Featured Projects
+      </h3>
+
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project: Project) => (
+          <div
+            key={project.title}
+            className="group relative flex flex-col justify-between rounded-2xl border border-slate-800/80 bg-[#0c0f17] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-slate-700 hover:shadow-xl"
+          >
+            <div>
+              {/* Image Container on Top */}
+              <div className="relative h-52 w-full overflow-hidden rounded-xl bg-slate-900">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+
+              {/* Title & Description */}
+              <div className="mt-5 space-y-2 px-1">
+                <h4 className="text-xl font-bold tracking-tight text-slate-100">
+                  {project.title}
+                </h4>
+                <p className="text-sm leading-relaxed text-slate-400">
+                  {project.description}
+                </p>
+              </div>
             </div>
+
+            {/* Tech Stack Badges */}
+            <div className="mt-6 flex flex-wrap gap-2 px-1">
+              {(project.tags || ["Next.js", "MongoDB", "Tailwind"]).map(
+                (tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-lg border border-slate-800 bg-slate-900/80 px-3 py-1.5 text-xs font-medium text-slate-300"
+                  >
+                    {tag}
+                  </span>
+                ),
+              )}
+            </div>
+
+            {/* Whole Card Clickable overlay */}
             <Link
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-linear-to-r from-purple-500 to-blue-400 text-white font-bold py-2 px-4 rounded-full hover:from-purple-600 hover:to-blue-500 transition-all duration-300 shadow-md mt-4"
-            >
-              Visit Project
-            </Link>
+              className="absolute inset-0 rounded-2xl"
+              aria-label={`View ${project.title}`}
+            />
           </div>
         ))}
       </div>
@@ -40,4 +76,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -5,7 +5,7 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     description:
       "A personal portfolio website built with Next.js, Tailwind CSS, and TypeScript.",
-    image: "/images/profile.png",
+    image: "/images/portfolio_pic.png",
     link: "https://abel-asmelash.vercel.app/",
   },
   {
