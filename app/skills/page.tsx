@@ -74,7 +74,12 @@ const SkillsPage = () => {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">My Skills</h1>
+        <h1 className="text-4xl font-bold mb-4">
+          My{" "}
+          <span className="bg-linear-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
+            Skills
+          </span>
+        </h1>
         <p className="text-gray-400 max-w-xl mx-auto">
           Technologies, frameworks, and tools I use to build scalable web
           applications and AI integration workflows.

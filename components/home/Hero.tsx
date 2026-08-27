@@ -6,7 +6,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <>
-      <main className="min-h-screen  bg-gray-900 text-white flex items-center justify-center px-6 py-12">
+      <main className="min-h-screen  bg-[#0b0f19] text-white flex items-center justify-center px-6 py-12">
         <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Column: Text Section */}
           <section className="flex flex-col space-y-4 text-left">
