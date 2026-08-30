@@ -29,7 +29,7 @@ const Hero = () => {
       gsap.to(spotlightRef.current, {
         x: x - 250,
         y: y - 250,
-        duration: 0.8,
+        duration: 0.9,
         ease: "power2.out",
       });
     };
@@ -82,7 +82,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute bottom-10 right-10 w-80 h-80 bg-purple-500/10 rounded-full blur-[100px] -z-10" />
 
       {/* Grid Pattern Overlay for AI/Dev Aesthetics */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#1f293d15_1px,transparent_1px),linear-gradient(to_bottom,#1f293d15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] -z-10" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#1f293d15_1px,transparent_1px),linear-gradient(to_bottom,#1f293d15_1px,transparent_1px)] bg-size-[4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] -z-10" />
 
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
         {/* Left Column: Text Section */}
@@ -100,7 +100,7 @@ const Hero = () => {
           >
             FULL-STACK DEVELOPER
             <br />
-            <span className="bg-gradient-to-r from-purple-500 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-purple-500 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
               AI INTEGRATION
             </span>
           </h1>
@@ -117,7 +117,7 @@ const Hero = () => {
           <div ref={ctaRef} className="pt-2">
             <Link
               href="/projects"
-              className="inline-block bg-gradient-to-r from-purple-500 to-blue-400 text-white font-bold py-3 px-6 rounded-full hover:from-purple-600 hover:to-blue-500 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-purple-500/20"
+              className="inline-block bg-linear-to-r from-purple-500 to-blue-400 text-white font-bold py-3 px-6 rounded-full hover:from-purple-600 hover:to-blue-500 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-purple-500/20"
             >
               View My Work
             </Link>
@@ -159,7 +159,7 @@ const Hero = () => {
         {/* Right Column: Profile Picture */}
         <section ref={imageRef} className="flex justify-center items-center">
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
+            <div className="absolute -inset-1 bg-linear-to-r from-purple-500 to-blue-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
             <Image
               src="/images/profile.png.jpeg"
               alt="Profile Picture"
