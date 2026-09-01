@@ -199,7 +199,7 @@ const Navbar = () => {
         aria-label="Primary"
       >
         {/* Rotating gradient border beam wrapper */}
-        <div className="beam-border relative overflow-hidden rounded-2xl p-[1px] shadow-[0_8px_40px_-12px_rgba(59,130,246,0.35)]">
+        <div className="beam-border relative overflow-hidden rounded-2xl p-px shadow-[0_8px_40px_-12px_rgba(59,130,246,0.35)]">
           <div className="relative overflow-hidden rounded-2xl bg-[#0a0e1c]/85 backdrop-blur-xl">
             <NoiseOverlay />
 
@@ -207,7 +207,7 @@ const Navbar = () => {
               {/* Brand */}
               <Link
                 href="/"
-                className="shrink-0 bg-gradient-to-r from-violet-300 via-blue-200 to-violet-300 bg-clip-text text-lg font-bold tracking-wide text-transparent"
+                className="shrink-0 bg-linear-to-r from-violet-300 via-blue-200 to-violet-300 bg-clip-text text-lg font-bold tracking-wide text-transparent"
               >
                 Abel Asmelash
               </Link>
@@ -228,9 +228,9 @@ const Navbar = () => {
               {/* Desktop right side */}
               <div className="hidden items-center gap-4 md:flex">
                 <ThemeToggle />
-                <a href="#contact" className="neon-cta">
+                <Link href="/contact" className="neon-cta">
                   Let&apos;s talk
-                </a>
+                </Link>
               </div>
 
               {/* Mobile right side */}
@@ -299,14 +299,14 @@ const Navbar = () => {
                     {item.label}
                   </Link>
                 ))}
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   data-mobile-link
                   onClick={() => setIsOpen(false)}
                   className="neon-cta mt-2 justify-center text-center"
                 >
                   Let&apos;s talk
-                </a>
+                </Link>
               </div>
             </div>
           </div>

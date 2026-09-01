@@ -110,7 +110,7 @@ const Hero = () => {
             className="text-gray-400 text-lg max-w-lg leading-relaxed"
           >
             Crafting clean, high-performance web applications powered by modern
-            AI workflows.
+            LLMs.
           </p>
 
           {/* CTA Button */}
