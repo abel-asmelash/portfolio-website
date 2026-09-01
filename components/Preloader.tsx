@@ -26,7 +26,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 z-[10000] bg-[#05040a] flex flex-col items-center justify-center text-white select-none overflow-hidden font-sans">
+    <div className="fixed inset-0 z-10000 bg-[#05040a] flex flex-col items-center justify-center text-white select-none overflow-hidden font-sans">
       {/* Grid background + neon glow blobs */}
       <div
         className="absolute inset-0 opacity-15 pointer-events-none"
@@ -39,19 +39,19 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Large background orbital ring */}
-      <div className="absolute w-[800px] h-[400px] border border-purple-500/10 rounded-[100%] rotate-[-25deg] pointer-events-none flex items-center justify-center">
+      <div className="absolute w-200 h-100 border border-purple-500/10 rounded-[100%] rotate-[-25deg] pointer-events-none flex items-center justify-center">
         <div className="absolute w-2.5 h-2.5 bg-purple-400 rounded-full blur-[1px] shadow-[0_0_12px_#c084fc] top-0 left-1/4 animate-pulse" />
         <div className="absolute w-2 h-2 bg-indigo-400 rounded-full blur-[1px] shadow-[0_0_10px_#818cf8] bottom-4 right-1/4" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center max-w-[480px] w-full px-6">
+      <div className="relative z-10 flex flex-col items-center max-w-120 w-full px-6">
         {/* Central diamond logo */}
         <div className="relative mb-10 flex items-center justify-center">
           {/* Neon glow behind the logo */}
           <div className="absolute w-36 h-36 bg-purple-600/30 blur-3xl rounded-full animate-pulse" />
 
           {/* Spinning ring around the logo */}
-          <div className="absolute w-52 h-20 border border-purple-400/40 rounded-[100%] -rotate-[28deg] shadow-[0_0_15px_rgba(168,85,247,0.2)] animate-[spin_12s_linear_infinite]">
+          <div className="absolute w-52 h-20 border border-purple-400/40 rounded-[100%] -rotate-28 shadow-[0_0_15px_rgba(168,85,247,0.2)] animate-[spin_12s_linear_infinite]">
             <div className="absolute -top-1 left-6 w-2 h-2 bg-purple-300 rounded-full shadow-[0_0_8px_#d8b4fe]" />
           </div>
 
@@ -62,7 +62,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
               <span className="text-purple-400 font-mono text-xl opacity-80">
                 &lt;
               </span>
-              <span className="bg-gradient-to-tr from-purple-400 via-indigo-300 to-white bg-clip-text text-transparent text-3xl font-extrabold drop-shadow-[0_0_12px_rgba(168,85,247,0.8)]">
+              <span className="bg-linear-to-tr from-purple-400 via-indigo-300 to-white bg-clip-text text-transparent text-3xl font-extrabold drop-shadow-[0_0_12px_rgba(168,85,247,0.8)]">
                 N
               </span>
               <span className="text-purple-400 font-mono text-xl opacity-80">
@@ -74,15 +74,16 @@ export default function Preloader({ onComplete }: PreloaderProps) {
 
         {/* Headings */}
         <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-center mb-2">
-          Welcome to My{" "}
+          Engineering{" "}
           <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            Portfolio
-          </span>
+            Full-Stack Platforms
+          </span>{" "}
+          & Intelligent Systems
         </h1>
 
-        <p className="text-xs font-mono text-gray-400 tracking-[0.3em] uppercase mb-9 opacity-80">
-          Code <span className="text-purple-500 mx-1">•</span> Design{" "}
-          <span className="text-purple-500 mx-1">•</span> Create
+        <p className="text-xs font-mono text-gray-400 tracking-[0.25em] uppercase mb-9 opacity-80">
+          Scalable Architecture <span className="text-purple-500 mx-1">•</span>{" "}
+          Modern Web APIs
         </p>
 
         {/* Progress bar + percentage */}
@@ -91,7 +92,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             {/* Progress bar container */}
             <div className="flex-1 h-3 bg-[#110f1d] border border-purple-900/40 rounded-full p-[2px] overflow-hidden shadow-inner">
               <div
-                className="h-full bg-gradient-to-r from-purple-600 via-indigo-500 to-purple-400 rounded-full transition-all duration-100 ease-out shadow-[0_0_15px_rgba(168,85,247,0.9)]"
+                className="h-full bg-linear-to-r from-purple-600 via-indigo-500 to-purple-400 rounded-full transition-all duration-100 ease-out shadow-[0_0_15px_rgba(168,85,247,0.9)]"
                 style={{ width: `${progress}%` }}
               />
             </div>
@@ -104,7 +105,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           {/* Subtext */}
           <div className="text-center">
             <span className="text-[10px] font-mono tracking-[0.35em] text-gray-500 uppercase">
-              Loading Experience
+              Loading
             </span>
           </div>
         </div>
