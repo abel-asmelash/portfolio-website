@@ -15,7 +15,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(onComplete, 500);
+          setTimeout(onComplete, 200);
           return 100;
         }
         return prev + 1;
@@ -75,7 +75,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         {/* Headings */}
         <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-center mb-2">
           Engineering{" "}
-          <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
             Full-Stack Platforms
           </span>{" "}
           & Intelligent Systems
@@ -90,7 +90,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         <div className="w-full space-y-3 mb-10">
           <div className="flex items-center gap-4">
             {/* Progress bar container */}
-            <div className="flex-1 h-3 bg-[#110f1d] border border-purple-900/40 rounded-full p-[2px] overflow-hidden shadow-inner">
+            <div className="flex-1 h-3 bg-[#110f1d] border border-purple-900/40 rounded-full p-0.5 overflow-hidden shadow-inner">
               <div
                 className="h-full bg-linear-to-r from-purple-600 via-indigo-500 to-purple-400 rounded-full transition-all duration-100 ease-out shadow-[0_0_15px_rgba(168,85,247,0.9)]"
                 style={{ width: `${progress}%` }}
