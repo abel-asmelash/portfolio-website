@@ -4,6 +4,7 @@ import Hero from "@/components/home/Hero";
 import WhatIDo from "@/components/home/WhatIDo";
 import Project from "@/app/projects/page";
 import Preloader from "@/components/Preloader";
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
   return (
