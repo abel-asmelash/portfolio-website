@@ -14,8 +14,8 @@ const Footer = () => {
               Abel Asmelash<span className="text-indigo-500">.</span>
             </h2>
             <p className="text-gray-400 max-w-sm text-sm leading-relaxed">
-              Passionate developer building modern, responsive, and
-              user-friendly web applications.  
+              Passionate AI Focused Full-stack Developer Building modern, responsive, and
+              user-friendly web Applications.  
             </p>
           </div>
 
