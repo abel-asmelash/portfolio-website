@@ -5,7 +5,6 @@ import Link from "next/link";
 import { FaLinkedinIn, FaEnvelope, FaGithub, FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 import { gsap } from "gsap";
-
 const Hero = () => {
   const containerRef = useRef<HTMLElement>(null);
   const spotlightRef = useRef<HTMLDivElement>(null);
@@ -69,7 +68,7 @@ const Hero = () => {
   return (
     <main
       ref={containerRef}
-      className="relative min-h-screen bg-[#0b0f19] text-white flex items-center justify-center px-6 py-12 overflow-hidden"
+      className="relative min-h-screen bg-white dark:bg-[#0b0f19] text-gray-900 dark:text-white flex items-center justify-center px-6 py-12 overflow-hidden"
     >
       {/* BACKGROUND ACCENTS (Low Overhead GSAP-Tracked Glow & Ambient Mesh) */}
       <div
@@ -107,7 +106,7 @@ const Hero = () => {
 
           <p
             ref={descRef}
-            className="text-gray-400 text-lg max-w-lg leading-relaxed"
+            className="text-gray-600 dark:text-gray-400 text-lg max-w-lg leading-relaxed"
           >
             Crafting clean, high-performance web applications powered by modern
             LLMs.
@@ -148,7 +147,7 @@ const Hero = () => {
                 href={social.href}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full border border-gray-800 bg-gray-900/80 flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500 hover:-translate-y-1 transition-all duration-200"
+                className="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-800 bg-gray-100 dark:bg-gray-900/80 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:border-purple-500 hover:-translate-y-1 transition-all duration-200"
               >
                 {social.icon}
               </Link>

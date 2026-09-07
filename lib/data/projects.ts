@@ -1,5 +1,6 @@
 // lib/data/projects.ts
 import { Project } from "../types/project";
+import {SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiFramer } from 'react-icons/si';
 
 export const projects: Project[] = [
   {
@@ -10,7 +11,7 @@ export const projects: Project[] = [
     image: "/images/portfolio_pic.png",
     link: "https://abel-asmelash.vercel.app/",
     github: "https://github.com/abel-asmelash/portfolio-website",
-    tags: ["Next.js", "Tailwind", "TypeScript", "framer-motion"],
+    tags: [SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer],
   },
   {
     slug: "icu-forum",
@@ -20,7 +21,7 @@ export const projects: Project[] = [
     image: "/images/icu_proj.png",
     link: "https://icukennisplatform.vercel.app/",
     github: "https://github.com/abel-asmelash/icuplatform",
-    tags: ["Next.js", "MongoDB", "AI", "TypeScript", "Tailwind"],
+    tags: [SiNextdotjs, SiMongodb, SiTypescript, SiTailwindcss, SiFramer],
   },
   {
     slug: "ai-country-explorer",
@@ -30,7 +31,7 @@ export const projects: Project[] = [
     image: "/images/explorer_image.png",
     link: "https://ai-powered-explorer-app-seven.vercel.app/",
     github: "https://github.com/abel-asmelash/country-explorer-app",
-    tags: ["Next.js", "Groq", "Tailwind"],
+    tags: [SiNextdotjs, SiTypescript, SiTailwindcss, SiFramer],
   },
 ];
 

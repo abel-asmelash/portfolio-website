@@ -20,7 +20,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         }
         return prev + 1;
       });
-    }, 25);
+    }, 10);
 
     return () => clearInterval(interval);
   }, [onComplete]);

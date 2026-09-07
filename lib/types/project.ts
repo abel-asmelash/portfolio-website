@@ -1,3 +1,5 @@
+import { IconType } from "react-icons/lib";
+
 //typescript for the projects data
 export interface Project {
     title: string;
@@ -6,5 +8,5 @@ export interface Project {
     link: string;
     github?: string;
     slug?: string; 
-    tags: string[];
+    tags: IconType[];
 }

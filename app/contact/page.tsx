@@ -10,20 +10,25 @@ import {
 const ContactPage = () => {
   const contactDetails = [
     {
-      icon: <FaEnvelope className="w-6 h-6 text-purple-400" />,
+      icon: (
+        <FaEnvelope className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+      ),
       title: "Email",
       value: "abelasmelash07@gmail.com",
       link: "mailto:abelasmelash07@gmail.com",
     },
     {
-      icon: <FaWhatsapp />,
+      icon: (
+        <FaWhatsapp className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+      ),
       title: "WhatsApp",
-      href: "https://wa.me/31613983234",
       value: "31613983234",
       link: "https://wa.me/31613983234",
     },
     {
-      icon: <FaMapMarkerAlt className="w-6 h-6 text-purple-400" />,
+      icon: (
+        <FaMapMarkerAlt className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+      ),
       title: "Location",
       value: "Gouda, The Netherlands",
       link: null,
@@ -44,24 +49,24 @@ const ContactPage = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-[#0b0b14] text-gray-100 flex flex-col justify-center px-6 py-16">
+    <main className="min-h-screen bg-white dark:bg-[#0b0b14] text-gray-900 dark:text-gray-100 flex flex-col justify-center px-6 py-16 transition-colors duration-300">
       <div className="max-w-4xl mx-auto w-full">
         {/* Header Section */}
         <div className="mb-12">
-          <span className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-2 block">
+          <span className="text-xs font-semibold uppercase tracking-widest text-purple-600 dark:text-purple-400 mb-2 block">
             GET IN TOUCH
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
             LET&rsquo;S CONNECT{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-cyan-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-cyan-600 dark:from-purple-400 dark:to-cyan-400">
               &
             </span>{" "}
-            <span className="bg-linear-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-700 to-blue-600 dark:from-purple-400 dark:to-blue-400">
               WORK TOGETHER
             </span>
           </h1>
-          <p className="text-gray-400 text-lg max-w-2xl">
-            I&lsquo;M currently open to new full-stack and AI development
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
+            I&lsquo;m currently open to new full-stack and AI development
             opportunities. Feel free to reach out directly via email, phone, or
             LinkedIn.
           </p>
@@ -72,60 +77,55 @@ const ContactPage = () => {
           {contactDetails.map((detail, index) => (
             <div
               key={index}
-              className="bg-[#121222]/60 border border-purple-900/30 rounded-2xl p-6 transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)]"
+              className="bg-gray-50 dark:bg-[#121222]/60 border border-purple-200 dark:border-purple-900/30 rounded-2xl p-6 transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)]"
             >
-              <div className="bg-purple-950/50 p-3 rounded-xl w-fit mb-4 border border-purple-800/40">
+              <div className="bg-purple-100 dark:bg-purple-950/50 p-3 rounded-xl w-fit mb-4 border border-purple-300 dark:border-purple-800/40">
                 {detail.icon}
               </div>
-              <h3 className="text-sm font-medium text-gray-400">
+              <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
                 {detail.title}
               </h3>
               {detail.link ? (
                 <a
                   href={detail.link}
-                  className="text-white font-semibold mt-1 inline-flex items-center gap-1 hover:text-purple-300 transition-colors"
+                  className="text-gray-900 dark:text-white font-semibold mt-1 inline-flex items-center gap-1 hover:text-purple-600 dark:hover:text-purple-300 transition-colors"
                 >
                   {detail.value}
                   <FaExternalLinkAlt className="w-4 h-4 opacity-70" />
                 </a>
               ) : (
-                <p className="text-white font-semibold mt-1">{detail.value}</p>
+                <p className="text-gray-900 dark:text-white font-semibold mt-1">
+                  {detail.value}
+                </p>
               )}
             </div>
           ))}
         </div>
 
         {/* Social Links & CTA Section */}
-        <div className="bg-linear-to-r from-purple-950/40 via-[#121222] to-purple-950/20 border border-purple-800/40 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="bg-linear-to-r from-purple-100 via-white to-purple-50 dark:from-purple-950/40 dark:via-[#121222] dark:to-purple-950/20 border border-purple-200 dark:border-purple-800/40 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-xl font-bold text-white mb-1">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
               Looking for my CV or projects?
             </h3>
-            <p className="text-gray-400 text-sm">
-              Explore my profiles across the web or grab a copy of my resume.
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              Explore my profiles across the web or connect directly with me.
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             {socialLinks.map((social, index) => (
               <a
                 key={index}
                 href={social.href}
                 target="_blank"
-                rel="noreferrer"
-                className="bg-[#1a1a2e] border border-gray-700/50 p-3 rounded-xl text-gray-300 hover:text-white hover:border-purple-500 transition-all hover:scale-105"
+                rel="noopener noreferrer"
+                className="p-3 bg-purple-100 hover:bg-purple-200 dark:bg-purple-900/30 dark:hover:bg-purple-800/50 text-purple-700 dark:text-purple-300 rounded-xl border border-purple-300 dark:border-purple-700/50 transition-colors"
                 aria-label={social.name}
               >
                 {social.icon}
               </a>
             ))}
-            <a
-              href="/resume.pdf"
-              download
-              className="ml-2 bg-linear-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-medium px-5 py-3 rounded-xl transition-all shadow-lg shadow-purple-900/40"
-            >
-              Download CV
-            </a>
           </div>
         </div>
       </div>
