@@ -2,12 +2,13 @@
 import { useState } from "react";
 import ProjectCard from "@/components/project/ProjectCard";
 import { Project } from "@/lib/types/project";
+ 
 
 const ProjectFilter = ({ projects }: { projects: Project[] }) => {
   const [activeTag, setActiveTag] = useState<string | null>(null);
-  const allTags = [...new Set(projects.flatMap((project) => project.tags))];
+  const allTags = [...new Set(projects.flatMap((project) => project.tags.map((tag) => tag.icon)))];
   const filtered = activeTag
-    ? projects.filter((project) => project.tags.includes(activeTag))
+    ? projects.filter((project) => project.tags.some((tag) => tag.name === activeTag))
     : projects;
 
   return (
@@ -23,13 +24,13 @@ const ProjectFilter = ({ projects }: { projects: Project[] }) => {
         </button>
         {allTags.map((tag) => (
           <button
-            key={tag}
-            onClick={() => setActiveTag(tag)}
+            key={tag.name}
+            onClick={() => setActiveTag(tag.name)}
             className={`px-4 py-2 rounded-full ${
-              activeTag === tag ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700"
+              activeTag === tag.name ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700"
             }`}
           >
-            {tag}
+            {tag.name}
           </button>
         ))}
       </div>

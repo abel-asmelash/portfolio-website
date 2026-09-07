@@ -21,9 +21,10 @@ export default async function ProjectPage({
       <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
 
       <div className="flex gap-2 mb-6 flex-wrap">
-        {project.tags.map((tag) => (
-          <span key={tag} className="px-3 py-1 text-sm rounded-full bg-white/5">
-            {tag}
+        {project.tags.map(({ name, icon: Icon }) => (
+          <span key={name} className="px-3 py-1 text-sm rounded-full bg-white/5">
+            <Icon size={16} />
+            {name}
           </span>
         ))}
       </div>

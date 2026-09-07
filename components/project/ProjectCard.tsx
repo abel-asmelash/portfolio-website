@@ -11,12 +11,13 @@ const ProjectCard = ({ slug, title, description, image, tags }: Project) => {
         <h3 className="text-xl font-bold">{title}</h3>
         <p className="text-white/60 text-sm mt-1">{description}</p>
         <div className="flex gap-2 mt-3 flex-wrap">
-          {tags.map((Icon, index) => (
+          {tags.map(({name, icon: Icon}) => (
             <span
-              key={index}
+              key={name}
               className="px-2 py-1 text-xs rounded-full bg-white/5"
             >
               <Icon size={22}/>
+              {name}
             </span>
           ))}
         </div>

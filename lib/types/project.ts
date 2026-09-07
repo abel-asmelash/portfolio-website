@@ -1,12 +1,16 @@
-import { IconType } from "react-icons/lib";
-
 //typescript for the projects data
+import { IconType } from "react-icons/lib";
+export interface Tag {
+  icon: IconType;
+  name: string;
+}
+
 export interface Project {
-    title: string;
-    description: string;
-    image: string;
-    link: string;
-    github?: string;
-    slug?: string; 
-    tags: IconType[];
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  github?: string;
+  slug?: string;
+  tags: Tag[];
 }

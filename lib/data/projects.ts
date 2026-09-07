@@ -11,17 +11,17 @@ export const projects: Project[] = [
     image: "/images/portfolio_pic.png",
     link: "https://abel-asmelash.vercel.app/",
     github: "https://github.com/abel-asmelash/portfolio-website",
-    tags: [SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer],
+    tags: [ { icon: SiNextdotjs, name: "Next.js" }, { icon: SiTailwindcss, name: "Tailwind CSS" }, { icon: SiTypescript, name: "TypeScript" }, { icon: SiFramer, name: "Framer Motion" } ],
   },
   {
     slug: "icu-forum",
     title: "ICU Forum",
     description:
-      "AI-powered discussion forum for a church built with Next.js and MongoDB.",
+      "AI-powered discussion forum for a church built with Next.js, TypeScript, Tailwind CSS, and MongoDB.",
     image: "/images/icu_proj.png",
     link: "https://icukennisplatform.vercel.app/",
     github: "https://github.com/abel-asmelash/icuplatform",
-    tags: [SiNextdotjs, SiMongodb, SiTypescript, SiTailwindcss, SiFramer],
+    tags: [ { icon: SiNextdotjs, name: "Next.js" }, { icon: SiMongodb, name: "MongoDB" }, { icon: SiTypescript, name: "TypeScript" }, { icon: SiTailwindcss, name: "Tailwind CSS" }, { icon: SiFramer, name: "Framer Motion" } ],
   },
   {
     slug: "ai-country-explorer",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     image: "/images/explorer_image.png",
     link: "https://ai-powered-explorer-app-seven.vercel.app/",
     github: "https://github.com/abel-asmelash/country-explorer-app",
-    tags: [SiNextdotjs, SiTypescript, SiTailwindcss, SiFramer],
+    tags: [ { icon: SiNextdotjs, name: "Next.js" }, { icon: SiTypescript, name: "TypeScript" }, { icon: SiTailwindcss, name: "Tailwind CSS" }, { icon: SiFramer, name: "Framer Motion" } ],
   },
 ];
 
