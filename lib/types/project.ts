@@ -11,6 +11,7 @@ export interface Project {
   image: string;
   link: string;
   github?: string;
+  status?: string;
   slug?: string;
   tags: Tag[];
 }

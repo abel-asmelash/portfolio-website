@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Social Links */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-              Connect
+             Let&apos;s Connect
             </h3>
             <div className="flex space-x-4">
               {[
