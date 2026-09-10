@@ -5,7 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-
+import Image from "next/image";
 /**
  * Subtle SVG mesh/noise texture, layered over the glass background at very
  * low opacity with `mix-blend-mode: overlay` so it reads as grain rather
@@ -209,7 +209,7 @@ const Navbar = () => {
                 href="/"
                 className="shrink-0 bg-linear-to-r from-violet-300 via-blue-200 to-violet-300 bg-clip-text text-lg font-bold tracking-wide text-transparent"
               >
-                Abel Asmelash
+                 <Image src="/images/namelogo.svg" alt="Logo" width={40} height={40} />
               </Link>
 
               {/* Desktop links */}
