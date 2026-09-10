@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand/About Section */}
           <div className="md:col-span-2 space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-wide">
-              Abel Asmelash<span className="text-indigo-500">.</span>
+              Abel Asmelash<span className="text-indigo-500"></span>
             </h2>
             <p className="text-gray-400 max-w-sm text-sm leading-relaxed">
               Passionate AI Focused Full-stack Developer Building modern, responsive, and
